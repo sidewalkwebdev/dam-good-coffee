@@ -5,8 +5,8 @@ x/* =========================================
   /* Pure Black for the background */
   --bg-black: #000000;
 
-  /* The Red from the photo */
-  --brand-red: #d92323;
+  /* The Red from the photo - brightened for better contrast */
+  --brand-red: #ff3333;
 
   /* Clean White */
   --text-white: #ffffff;
@@ -21,9 +21,10 @@ body {
   color: var(--text-white); /* WHITE TEXT */
 }
 
-/* THE "LOGO" FONT - Matches the photo sign */
+/* THE "LOGO" FONT - Modern and clean */
 .logo-font {
-  font-family: "Anton", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -41,6 +42,9 @@ body {
   font-size: 1.6rem;
   line-height: 0.9; /* Stacks the text tightly like the logo */
   color: #fff !important;
+  font-family: "Anton", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .nav-link {
@@ -59,9 +63,9 @@ body {
 
 /* Primary Button (Red) */
 .btn-primary {
-  background-color: var(--brand-red);
-  border-color: var(--brand-red);
-  color: #fff;
+  background-color: var(--brand-red) !important;
+  border-color: var(--brand-red) !important;
+  color: #fff !important;
   border-radius: 0; /* Square edges = Industrial look */
   padding: 10px 25px;
   font-weight: 700;
@@ -70,9 +74,18 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: #fff;
-  border-color: #fff;
-  color: #000;
+  background-color: #cc0000 !important;
+  border-color: #cc0000 !important;
+  color: #fff !important;
+}
+
+/* Center ORDER NOW button on mobile */
+@media (max-width: 991px) {
+  .navbar-collapse .btn-primary {
+    margin: 20px auto 10px;
+    display: block;
+    width: fit-content;
+  }
 }
 
 /* =========================================
@@ -81,12 +94,15 @@ body {
 .hero {
   position: relative;
   /* High contrast black and white photo background */
-  background: url("https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80")
-    no-repeat center center/cover;
+  background: url(assets/header.jpg)
+    no-repeat center top;
+  background-size: cover;
+  background-position: center 0%;
   height: 85vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .hero-overlay {
@@ -111,32 +127,35 @@ body {
 
 /* Hero Buttons */
 .btn-red {
-  background-color: var(--brand-red);
-  color: white;
+  background-color: #ff3333 !important;
+  color: white !important;
   font-weight: 700;
-  border-radius: 0;
-  padding: 12px 30px;
-  border: 2px solid var(--brand-red);
+  border-radius: 0 !important;
+  padding: 12px 30px !important;
+  border: 2px solid #ff3333 !important;
   font-family: "Anton", sans-serif;
   letter-spacing: 1px;
 }
 .btn-red:hover {
-  background-color: transparent;
-  color: white;
+  background-color: #cc0000 !important;
+  color: white !important;
+  border-color: #cc0000 !important;
 }
 
 .btn-outline-white {
-  border: 2px solid white;
-  color: white;
+  border: 2px solid white !important;
+  background-color: #ff3333 !important;
+  color: white !important;
   font-weight: 700;
-  border-radius: 0;
-  padding: 12px 30px;
+  border-radius: 0 !important;
+  padding: 12px 30px !important;
   font-family: "Anton", sans-serif;
   letter-spacing: 1px;
 }
 .btn-outline-white:hover {
-  background-color: white;
-  color: black;
+  background-color: white !important;
+  color: black !important;
+  border-color: white !important;
 }
 
 /* =========================================
@@ -151,7 +170,7 @@ body {
 }
 
 .text-grey {
-  color: var(--text-grey);
+  color: #cccccc !important;
 }
 
 .feature-card {
@@ -218,23 +237,25 @@ body {
 
 /* Review Buttons */
 .btn-yelp {
-  background-color: #d32323;
-  color: white;
+  background-color: white !important;
+  color: black !important;
   border-radius: 4px;
   font-weight: 600;
+  border: 2px solid white !important;
 }
 
 .btn-google {
-  background-color: white;
-  color: black;
+  background-color: white !important;
+  color: black !important;
   border-radius: 4px;
   font-weight: 600;
+  border: 2px solid white !important;
 }
 
 /* Social Icons */
 .social-icons i {
   font-size: 1.5rem;
-  color: #666;
+  color: #ccc;
   transition: color 0.3s;
 }
 .social-icons i:hover {
@@ -246,7 +267,14 @@ body {
 
 .menu-hero {
   /* Different background for the menu page */
-  background: url("https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80")
+  background: url(assets/menu-header.jpg)
+    no-repeat center center/cover;
+  height: 60vh; /* Shorter than home hero */
+}
+
+.about-hero {
+  /* Different background for the about page */
+  background: url(assets/about-header.jpg)
     no-repeat center center/cover;
   height: 60vh; /* Shorter than home hero */
 }
@@ -258,19 +286,54 @@ body {
   margin-bottom: 15px;
 }
 
+/* Menu category headings */
+.menu-category-wrapper h2 {
+  color: #ff3333 !important;
+}
+
+/* All menu section headings */
+.py-5.bg-black h2.logo-font {
+  color: #ff3333 !important;
+}
+
 .menu-price {
   font-size: 1.2rem;
   letter-spacing: 1px;
+  color: white !important;
+  font-weight: 700;
 }
 
 /* Feature Card tweaks for Apparel section */
 .feature-card h5 {
   letter-spacing: 1px;
+  color: #ff3333 !important;
 }
 
-/* Navbar toggler icon inverted */
+/* Navbar toggler styling */
+.navbar-toggler {
+  border: 2px solid var(--brand-red) !important;
+  padding: 8px 10px;
+  border-radius: 4px;
+  background-color: transparent !important;
+}
+
+.navbar-toggler:hover {
+  background-color: rgba(217, 35, 35, 0.1) !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(217, 35, 35, 0.5);
+}
+
+/* Navbar toggler icon - make it bright white */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  width: 1.5em;
+  height: 1.5em;
+}
+
 .navbar-toggler-inverted {
-  filter: invert(1);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
 /* Map iframe styling */
@@ -285,8 +348,28 @@ body {
   font-size: 0.6em;
 }
 
+/* Star ratings */
+.star-rating {
+  color: #FFD700 !important;
+  font-weight: 900;
+}
+
 /* Owner quote section */
 .owner-quote {
   max-width: 700px;
   margin: 0 auto;
+}
+
+/* Legal pages content styling */
+.legal-content h2 {
+  color: #fff !important;
+}
+
+.legal-content p,
+.legal-content ul {
+  line-height: 1.8;
+}
+
+.legal-content ul {
+  margin-left: 20px;
 }
