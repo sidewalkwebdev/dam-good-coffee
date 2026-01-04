@@ -4,38 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Dam Good Coffee | Mid-Wilshire's Best Black-Owned Coffee Shop</title>
+    <title>DAMM | Mid-Wilshire</title>
     <meta
       name="description"
-      content="Mid-Wilshire's favorite Black-owned coffee shop. Serving organic espresso, massive coffee cake, and donuts in a cool, industrial patio setting."
+      content="DAMM. Streetwear. Coffee. Culture. Los Angeles."
     />
-    <meta name="keywords" content="coffee shop Los Angeles, Dam Good Coffee, black-owned coffee, Mid-Wilshire coffee, organic espresso, coffee cake, San Vicente Blvd" />
-    <meta name="author" content="Dam Good Coffee" />
-    <link rel="canonical" href="https://damgoodcoffee.com/" />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://damgoodcoffee.com/" />
-    <meta property="og:title" content="Dam Good Coffee | Mid-Wilshire's Best Black-Owned Coffee Shop" />
-    <meta property="og:description" content="Mid-Wilshire's favorite Black-owned coffee shop. Serving organic espresso, massive coffee cake, and donuts in a cool, industrial patio setting." />
-    <meta property="og:image" content="https://damgoodcoffee.com/assets/header.jpg" />
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://damgoodcoffee.com/" />
-    <meta property="twitter:title" content="Dam Good Coffee | Mid-Wilshire's Best Black-Owned Coffee Shop" />
-    <meta property="twitter:description" content="Mid-Wilshire's favorite Black-owned coffee shop. Serving organic espresso, massive coffee cake, and donuts in a cool, industrial patio setting." />
-    <meta property="twitter:image" content="https://damgoodcoffee.com/assets/header.jpg" />
-    
-    <!-- Business Info -->
-    <meta name="geo.region" content="US-CA" />
-    <meta name="geo.placename" content="Los Angeles" />
-    <meta name="geo.position" content="34.062038;-118.352861" />
-    <meta name="ICBM" content="34.062038, -118.352861" />
-
-    <link rel="stylesheet" href="styles.css" />
-
-    <script defer src="https://friconix.com/cdn/friconix.js"></script>
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -46,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@600;700;800&family=Montserrat:wght@300;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
 
@@ -54,199 +27,321 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="dark-mode">
+  <body>
     <nav class="navbar navbar-expand-lg sticky-top">
-      <div class="container">
-        <a class="navbar-brand logo-font" href="index.html"
-          >DAM GOOD<br />COFFEE</a
-        >
+      <div class="container-fluid px-5">
+        <a class="navbar-brand font-display text-white" href="#">DAM.</a>
 
         <button
-          class="navbar-toggler navbar-dark"
+          class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarContent"
-          aria-label="Toggle navigation"
+          data-bs-target="#navbarNav"
+          style="border: none"
         >
-          <span class="navbar-toggler-icon navbar-toggler-inverted"></span>
+          <i class="bi bi-list text-white fs-1"></i>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarContent">
-          <ul class="navbar-nav mx-auto align-items-center">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center gap-4">
             <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>
+              <a class="nav-link" href="shop.html">The Drop</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="menu.html">Menu</a>
+              <a class="nav-link" href="brew.html">Brew</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" href="vibe.html">Vibe</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Location</a>
+              <a class="nav-link" href="order.html">
+                <i class="bi bi-bag-fill fs-5"></i>
+              </a>
             </li>
           </ul>
-          <button
-            class="btn btn-primary"
-            onclick="window.location.href='#contact'"
-          >
-            ORDER NOW
-          </button>
         </div>
       </div>
     </nav>
 
-    <header class="hero">
-      <div class="hero-overlay"></div>
-      <div class="container hero-content text-center">
-        <h1 class="display-1 logo-font">SIMPLY DAM GOOD.</h1>
-        <p class="lead mb-4 text-white">
-          Mid-Wilshire's favorite Black-owned coffee spot.
-        </p>
-        <div class="d-flex justify-content-center gap-3">
-          <button
-            class="btn btn-red btn-lg"
-            onclick="window.location.href='menu.html'"
-          >
-            See The Menu
-          </button>
-          <button
-            class="btn btn-outline-white btn-lg"
-            onclick="window.location.href='#contact'"
-          >
-            Find The Shop
-          </button>
+    <header class="hero-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h1 class="hero-title font-display text-white">
+              STREETWEAR.<br />
+              <span class="text-red">CULTURE.</span><br />
+              CAFFEINE.
+            </h1>
+            <p class="lead text-white mb-5" style="max-width: 500px">
+              Mid-Wilshire's exclusive lifestyle hub. Limited drops, infinite
+              energy.
+            </p>
+            <div class="d-flex gap-3">
+              <button class="btn-hype">Shop The Drop</button>
+              <button class="btn btn-outline-light rounded-0 px-4 fw-bold">
+                Menu
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </header>
 
-    <section class="py-5 bg-black text-white position-relative">
-      <div class="container text-center position-relative z-2">
-        <h2 class="mb-5 section-title-white logo-font text-red">THE VIBE</h2>
+    <div class="marquee-wrapper">
+      <div class="marquee-content">
+        DAM FRESH /// DAM FLY /// NEW DROP {ENTER DATE HERE} /// COFFEE CAKE ///
+        STREETWEAR /// DAM FRESH /// DAM FLY /// NEW DROP {ENTER DATE HERE} /// COFFEE
+        CAKE /// STREETWEAR ///
+      </div>
+    </div>
+
+    <section id="shop" class="py-5">
+      <div class="container py-5">
+        <div class="d-flex justify-content-between align-items-end mb-5">
+          <h2 class="font-display display-3 mb-0">LATEST DROP</h2>
+          <a href="#" class="text-red fw-bold text-uppercase"
+            >View All <i class="bi bi-arrow-right"></i
+          ></a>
+        </div>
+
         <div class="row g-4">
-          <div class="col-md-4">
-            <div class="feature-card h-100">
-              <i class="bi bi-cup-hot-fill display-4 text-red mb-3"></i>
-              <h4 class="logo-font">Coffee & Cake</h4>
-              <p class="text-grey">
-                Home of the famous Coffee Cake, Apple Fritters, and strong
-                roasts.
-              </p>
+          <div class="col-6 col-md-3">
+            <div class="product-card">
+              <div class="sold-out-badge">Selling Fast</div>
+              <img
+                src="https://firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png"
+                alt="Hoodie"
+                class="product-img"
+              />
+              <div class="p-3">
+                <h5 class="font-display mb-1">DAM Hoodie</h5>
+                <p class="text-secondary small mb-2">Heavyweight Cotton</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-bold">$85.00</span>
+                  <button class="btn btn-sm btn-outline-light rounded-0">
+                    +
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="feature-card h-100">
-              <i class="bi bi-heart-fill display-4 text-red mb-3"></i>
-              <h4 class="logo-font">Family Owned</h4>
-              <p class="text-grey">
-                Black-owned and operated. We pour passion passed down from
-                generations.
-              </p>
+
+          <div class="col-6 col-md-3">
+            <div class="product-card">
+              <img
+                src="https://firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png"
+                alt="Beanie"
+                class="product-img"
+              />
+              <div class="p-3">
+                <h5 class="font-display mb-1">Skull Cap</h5>
+                <p class="text-secondary small mb-2">One Size / Red</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-bold">$35.00</span>
+                  <button class="btn btn-sm btn-outline-light rounded-0">
+                    +
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="feature-card h-100">
-              <i class="bi bi-people-fill display-4 text-red mb-3"></i>
-              <h4 class="logo-font">The Patio</h4>
-              <p class="text-grey">
-                A cool, industrial outdoor space to work, chill, or vibe with
-                the community.
-              </p>
+
+          <div class="col-6 col-md-3">
+            <div class="product-card">
+              <img
+                src="https://firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png"
+                alt="Beans"
+                class="product-img"
+              />
+              <div class="p-3">
+                <h5 class="font-display mb-1">House Roast</h5>
+                <p class="text-secondary small mb-2">12oz Whole Bean</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-bold">$22.00</span>
+                  <button class="btn btn-sm btn-outline-light rounded-0">
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <div class="product-card">
+              <div class="sold-out-badge bg-secondary">Sold Out</div>
+              <img
+                src="https://firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png"
+                alt="Tee"
+                class="product-img"
+              />
+              <div class="p-3">
+                <h5 class="font-display mb-1">Logo Tee</h5>
+                <p class="text-secondary small mb-2">Vintage Wash</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-bold text-secondary">$45.00</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <footer id="contact" class="footer-section">
-      <div class="container">
-        <div class="row gy-5">
-          <div class="col-md-4">
-            <h4 class="footer-heading logo-font">Visit Us</h4>
-            <ul class="list-unstyled">
-              <li class="mb-4">
-                <div class="d-flex align-items-start">
-                  <i class="bi bi-geo-alt-fill me-2 mt-1 text-red"></i>
-                  <div>
-                    <strong>Address:</strong><br />
-                    <a href="#" class="contact-link">
-                      5616 San Vicente Blvd<br />
-                      Los Angeles, CA 90019
-                    </a>
-                  </div>
-                </div>
-                <div class="map-buttons mt-3 d-flex gap-2 flex-wrap">
-                  <a
-                    href="https://maps.apple.com/place?place-id=I1D75FC6639A49CE5&address=5616+San+Vicente+Blvd%2C+Los+Angeles%2C+CA++90019%2C+United+States&coordinate=34.0539704%2C-118.3554223&name=Dam+Good+Coffee&_provider=9902"
-                    class="btn-map apple-map"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <i class="bi bi-apple me-1"></i> Apple Maps
-                  </a>
-                  <a
-                    href="https://www.google.com/maps/place/Dam+Good+Coffee/@34.0539815,-118.3580197,1577m/data=!3m2!1e3!4b1!4m6!3m5!1s0x80c2b976ce0e6f07:0xc114c45b64f78272!8m2!3d34.0539815!4d-118.3554448!16s%2Fg%2F11p12xt2b7!5m1!1e2?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA3MUgBUAM%3D"
-                    class="btn-map google-map"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <i class="bi bi-google me-1"></i> Google Maps
-                  </a>
-                </div>
+    <section id="coffee" class="py-5 bg-white text-black">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <h2 class="font-display display-1 text-black">
+              FUEL FOR<br />THE HUSTLE
+            </h2>
+            <p class="lead mb-4">
+              We don't just sell clothes. We brew the hardest hitting espresso
+              in Mid-Wilshire.
+            </p>
+            <ul class="list-unstyled fw-bold fs-5 mb-4">
+              <li
+                class="mb-2 border-bottom border-dark pb-2 d-flex justify-content-between"
+              >
+                <span>HONEY VANILLA LATTE</span>
+                <span class="text-red">$6</span>
               </li>
-              <li class="mb-3">
-                <div class="d-flex align-items-start">
-                  <i class="bi bi-clock-fill me-2 mt-1 text-red"></i>
-                  <div>
-                    <strong>Hours:</strong><br />
-                    Mon - Sun: 8:00 AM - 4:00 PM
-                  </div>
-                </div>
+              <li
+                class="mb-2 border-bottom border-dark pb-2 d-flex justify-content-between"
+              >
+                <span>MATCHA FUSION</span>
+                <span class="text-red">$6</span>
+              </li>
+              <li
+                class="mb-2 border-bottom border-dark pb-2 d-flex justify-content-between"
+              >
+                <span>FAMOUS COFFEE CAKE</span>
+                <span class="text-red">$5</span>
               </li>
             </ul>
-          </div>
-
-          <div class="col-md-4">
-            <h4 class="footer-heading logo-font">Find Us</h4>
-            <iframe
-              class="map-container map-iframe"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.6!2d-118.3!3d34.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDAzJzE4LjAiTiAxMTjCsDIxJzEwLjAiVw!5e0!3m2!1sen!2sus!4v1234567890"
-              width="100%"
-              height="200"
-              title="Dam Good Coffee Location Map"
-              allowfullscreen=""
-              loading="lazy"
+            <a
+              href="menu.html"
+              class="btn btn-dark rounded-0 px-4 py-3 font-display"
+              >FULL MENU</a
             >
-            </iframe>
           </div>
+          <div class="col-lg-6">
+            <img
+              src="https://s3-media0.fl.yelpcdn.com/bphoto/ULs5G1u29VqS2j-BHkDVtA/o.jpg"
+              class="img-fluid"
+              style="filter: contrast(120%)"
+              alt="Coffee Pour"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="col-md-4">
-            <h4 class="footer-heading logo-font">Community</h4>
-            <ul class="list-unstyled mb-4">
-              <li><a href="about.html" class="footer-link">Our Story</a></li>
-              <li><a href="menu.html" class="footer-link">Full Menu</a></li>
-            </ul>
+    <section id="social" class="py-5">
+      <div class="container-fluid px-0">
+        <div class="text-center mb-4">
+          <h2 class="font-display text-white">ON THE FEED</h2>
+          <p class="text-grey">@DAM_LA</p>
+        </div>
 
-            <div class="review-box p-3 border border-secondary rounded">
-              <h5 class="mb-2 text-white logo-font">Love the coffee?<br>Leave us a review!</h5>
-              <div class="d-flex gap-2">
-                <a href="https://www.yelp.com/biz/dam-good-coffee-los-angeles" target="_blank" rel="noopener" class="btn btn-sm btn-yelp w-50">Yelp</a>
-                <a href="https://www.google.com/search?q=google+review+dam+good+coffee&rlz=1C5CHFA_en&oq=google+review+dam+good+coffee&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORigATIGCAEQRRhA0gEINDU2NGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8&lqi=Ch1nb29nbGUgcmV2aWV3IGRhbSBnb29kIGNvZmZlZSIFOAGIAQFIx5KyroS1gIAIWh0QABABEAIYABgBGAIiD2RhbSBnb29kIGNvZmZlZZIBC2NvZmZlZV9zaG9wmgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVU5QTW5aaFQxaDNFQUXgAQD6AQQIARAw#rlimm=13912961045669315186" target="_blank" rel="noopener" class="btn btn-sm btn-google w-50">Google</a>
+        <div class="social-widget-container">
+          <div class="row g-0">
+            <div class="col-6 col-md-3">
+              <div class="video-card">
+                <video autoplay muted loop playsinline>
+                  <source
+                    src="https://videos.pexels.com/video-files/4232537/4232537-hd_720_1280_24fps.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+                <div class="social-overlay">
+                  <i class="bi bi-tiktok fs-2 text-white"></i>
+                </div>
               </div>
             </div>
 
-            <div class="mt-4 d-flex gap-3 social-icons">
-              <a href="https://www.instagram.com/damgoodcoffee_/?hl=en" target="_blank" rel="noopener" aria-label="Visit our Instagram"><i class="bi bi-instagram"></i></a>
-              <a href="https://www.facebook.com/littleamsterdamcoffee/" target="_blank" rel="noopener" aria-label="Visit our Facebook"><i class="bi bi-facebook"></i></a>
+            <div class="col-6 col-md-3">
+              <div class="video-card">
+                <video autoplay muted loop playsinline>
+                  <source
+                    src="assets/ig-video-one.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+                <div class="social-overlay">
+                  <i class="bi bi-instagram fs-2 text-white"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+              <div class="video-card">
+                <video autoplay muted loop playsinline>
+                  <source
+                    src="https://videos.pexels.com/video-files/8061957/8061957-hd_1080_1920_30fps.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+                <div class="social-overlay">
+                  <i class="bi bi-tiktok fs-2 text-white"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+              <div class="video-card">
+                <video autoplay muted loop playsinline>
+                  <source
+                    src="assets/ig-video-two.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+                <div class="social-overlay">
+                  <i class="bi bi-instagram fs-2 text-white"></i>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="text-center mt-5 pt-4 border-top border-secondary">
-          <p class="small text-white-50 mb-2">© 2025 Dam Good Coffee.</p>
-          <div class="small">
-            <a href="privacy-policy.html" class="footer-link me-3">Privacy Policy</a>
-            <a href="terms.html" class="footer-link">Terms & Conditions</a>
+      </div>
+    </section>
+
+    <footer class="py-5 border-top border-secondary">
+      <div class="container">
+        <div class="row gy-5">
+          <div class="col-lg-4">
+            <h2 class="font-display mb-4">DAM.</h2>
+            <p class="text-secondary">
+              5616 San Vicente Blvd<br />Los Angeles, CA 90019
+            </p>
+          </div>
+          <div class="col-lg-4">
+            <h5 class="font-display text-red mb-3">STAY IN THE LOOP</h5>
+            <p class="text-secondary small">
+              Sign up for drop alerts. No spam, just hype.
+            </p>
+            <div class="input-group mb-3">
+              <input
+                type="email"
+                class="form-control rounded-0 bg-dark text-white border-secondary"
+                placeholder="Email Address"
+              />
+              <button class="btn btn-hype" type="button">SUBMIT</button>
+            </div>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="#" class="fs-3 text-white me-3"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            <a href="#" class="fs-3 text-white me-3"
+              ><i class="bi bi-tiktok"></i
+            ></a>
+            <a href="#" class="fs-3 text-white"
+              ><i class="bi bi-twitter-x"></i
+            ></a>
+            <p class="text-secondary small mt-3">© 2025 DAM.</p>
           </div>
         </div>
       </div>
@@ -256,5 +351,6 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       crossorigin="anonymous"
     ></script>
+    <script async src="//www.instagram.com/embed.js"></script>
   </body>
 </html>
