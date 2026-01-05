@@ -258,100 +258,177 @@ a {
   background-color: var(--bg-black);
   border-bottom: 1px solid #1a1a1a;
 }
-/* =========================================
-   BREW / MENU PAGE STYLES
-   ========================================= */
-
-.brew-hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
-  background-size: cover;
-  background-position: center;
-  height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* --- GLOBAL VARIABLES & RESET --- */
+:root {
+  --brand-red: #d90000;
+  --brand-black: #080808;
+  --brand-gray: #1a1a1a;
+  --text-white: #ffffff;
 }
 
-.menu-item-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  border-bottom: 1px dashed #333; /* Industrial dashed line */
-  padding-bottom: 15px;
-  margin-bottom: 20px;
+body {
+  background-color: var(--brand-black);
+  color: var(--text-white);
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
 }
 
-.menu-name {
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: #fff;
-  display: block;
-}
-
-.menu-desc {
-  font-size: 0.85rem;
-  color: #888;
-  margin-bottom: 0;
-  font-weight: 400;
-}
-
-.menu-price {
+/* --- TYPOGRAPHY --- */
+h1,
+h2,
+h3,
+h4,
+.font-display {
   font-family: "Anton", sans-serif;
-  color: var(--brand-red);
-  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.text-red {
+  color: var(--brand-red) !important;
+}
+
+/* --- NAVIGATION --- */
+.navbar {
+  background-color: rgba(8, 8, 8, 0.95);
+  border-bottom: 1px solid #222;
+  padding: 1rem 0;
+}
+
+.nav-link {
+  color: #888 !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
   letter-spacing: 1px;
-}
-/* =========================================
-   ORDER / MENU SPECIFIC STYLES
-   ========================================= */
-
-.order-item-card {
-  background: #111;
-  border: 1px solid #333;
-  transition: all 0.2s;
+  transition: color 0.3s ease;
 }
 
-.order-item-card:hover {
-  border-color: var(--brand-red);
-  background: #161616;
+.nav-link:hover,
+.nav-link.active {
+  color: white !important;
 }
 
-.order-img {
-  width: 100px;
-  height: 100px;
+/* --- SPLIT SCREEN CARDS (The New Layout) --- */
+.split-card {
+  position: relative;
+  height: 500px;
   background-size: cover;
   background-position: center;
-  border-right: 1px solid #333;
+  overflow: hidden;
+  border: 1px solid #333;
+  transition: transform 0.4s ease, border-color 0.4s ease;
 }
 
-/* Sticky Cart for Desktop */
-.sticky-cart {
-  background: #111;
-  border: 1px solid var(--brand-red); /* Highlight the cart */
-  position: sticky;
-  top: 100px; /* Space from top of browser */
+/* Dark overlay to make text pop */
+.split-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2));
+  z-index: 1;
 }
 
-/* Make cart stick to bottom on mobile */
-@media (max-width: 991px) {
-  .sticky-cart {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    border-top: 2px solid var(--brand-red);
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
+.split-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--brand-red);
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 3rem;
+  z-index: 2;
+}
+
+/* --- BUTTONS --- */
+.btn-action {
+  background: white;
+  color: black;
+  font-family: "Anton", sans-serif;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.btn-action:hover {
+  background: var(--brand-red);
+  color: white;
+}
+
+.btn-sub-action {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-sub-action:hover {
+  background: white;
+  color: black;
+}
+
+/* --- QUICK LINKS GRID --- */
+.quick-link-box {
+  background: var(--brand-gray);
+  padding: 2rem;
+  border: 1px solid #333;
+  height: 100%;
+  transition: background 0.3s;
+}
+
+.quick-link-box:hover {
+  background: #222;
+}
+
+/* --- MOBILE ADJUSTMENTS --- */
+@media (max-width: 768px) {
+  .split-card {
+    height: 350px;
   }
-
-  /* Push content up so it doesn't get hidden behind cart on mobile */
-  body {
-    padding-bottom: 300px;
+  .card-content {
+    padding: 1.5rem;
   }
 }
-.hover-white:hover {
-    color: #fff !important;
+/* --- PRODUCT GRID UPDATES --- */
+.quick-link-box {
+  padding: 0 !important; /* Removes padding so image touches edges */
+  overflow: hidden; /* Keeps image inside the border radius */
+  display: flex;
+  flex-direction: column;
+}
+
+.product-thumb {
+  width: 100%;
+  height: 250px; /* Adjust height here */
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease;
+}
+
+/* Zoom effect on hover */
+.quick-link-box:hover .product-thumb {
+  transform: scale(1.05);
+}
+
+.product-info {
+  padding: 1rem;
+  background-color: var(--brand-gray);
+  position: relative;
+  z-index: 2;
 }
