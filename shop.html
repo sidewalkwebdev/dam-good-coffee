@@ -94,8 +94,8 @@
 
     <section class="py-4 pb-5">
       <div class="container">
-        <div class="row g-3 g-md-4">
-          <div class="col-6 col-md-4 col-lg-3">
+        <div class="row g-3 g-md-4" id="productGrid">
+          <div class="col-6 col-md-4 col-lg-3" data-category="hoodies">
             <div class="product-card h-100">
               <div class="sold-out-badge">NEW</div>
               <img
@@ -116,7 +116,7 @@
             </div>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3">
+          <div class="col-6 col-md-4 col-lg-3" data-category="headwear">
             <div class="product-card h-100">
               <img
                 src="https://firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png"
@@ -136,7 +136,7 @@
             </div>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3">
+          <div class="col-6 col-md-4 col-lg-3" data-category="coffee">
             <div class="product-card h-100">
               <img
                 src="https://firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png"
@@ -156,7 +156,7 @@
             </div>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3">
+          <div class="col-6 col-md-4 col-lg-3" data-category="tees">
             <div class="product-card h-100 opacity-75">
               <div class="sold-out-badge bg-secondary">SOLD OUT</div>
               <img
@@ -174,7 +174,7 @@
             </div>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3">
+          <div class="col-6 col-md-4 col-lg-3" data-category="accessories">
             <div class="product-card h-100">
               <img
                 src="https://firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png"
@@ -194,7 +194,7 @@
             </div>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3">
+          <div class="col-6 col-md-4 col-lg-3" data-category="accessories">
             <div class="product-card h-100">
               <img
                 src="https://firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png"
@@ -214,7 +214,7 @@
             </div>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3">
+          <div class="col-6 col-md-4 col-lg-3" data-category="coffee">
             <div class="product-card h-100">
               <img
                 src="https://firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png"
@@ -234,7 +234,7 @@
             </div>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3">
+          <div class="col-6 col-md-4 col-lg-3" data-category="hoodies">
             <div class="product-card h-100">
               <div class="sold-out-badge bg-secondary">SOLD OUT</div>
               <img
@@ -298,5 +298,38 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       crossorigin="anonymous"
     ></script>
+    <script>
+      // Product filter functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const filterButtons = document.querySelectorAll('.btn-filter');
+        const products = document.querySelectorAll('#productGrid > div[data-category]');
+        
+        filterButtons.forEach(button => {
+          button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            // Get the filter category from button text
+            const filterText = this.textContent.toLowerCase();
+            
+            // Show/hide products based on category
+            products.forEach(product => {
+              if (filterText === 'all') {
+                product.style.display = 'block';
+              } else {
+                const category = product.dataset.category;
+                if (category === filterText) {
+                  product.style.display = 'block';
+                } else {
+                  product.style.display = 'none';
+                }
+              }
+            });
+          });
+        });
+      });
+    </script>
   </body>
 </html>
