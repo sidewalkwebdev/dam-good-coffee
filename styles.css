@@ -352,3 +352,6 @@ a {
     padding-bottom: 300px;
   }
 }
+.hover-white:hover {
+    color: #fff !important;
+}
